@@ -5,26 +5,38 @@
     height: 60px;
     justify-content: space-between;
     display: flex;
-    background-color: rgb(72, 68, 68);
+    background-color:rgb(15, 15, 15);
     position: sticky;
     z-index: 100;
-    border-bottom: 1px solid rgb(101, 91, 91);  
     
 }
 
 .header-right{
     display: flex;
-    width: 170px;
+    width: 180px;
     align-items: center;
     justify-content: space-between;
     right:3%;
     margin-right: 20px;
+    
 
 }
-.logo{
-    width: 90px;
+.header_logo{
+    width: 60px;
+    height: 45px;
     margin-left: 15px;
-    margin-bottom:3px;
+    
+    
+}
+
+.heade_burger{
+    margin-bottom: 10px;
+}
+.header_burger:hover{
+    font-size: 30px !important;
+    color: white;
+    transition: all 0.32s;
+
 }
 
 .header_left{

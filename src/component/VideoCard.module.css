@@ -1,0 +1,42 @@
+.videoCard{
+    width: 290px;
+    margin-bottom: 40px;
+}
+
+.VideoCard_image{
+    height: 165px;
+    width: 275px;
+    border-radius: 15px;
+
+}
+.VideoCard_info{
+    display: flex;
+    margin-top: 10px;
+    padding-right: 18px;
+
+}
+
+.video_text{
+    margin-left: 10px;
+}
+
+.video_text h4{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+    margin-bottom: 2.5px;
+}
+
+.video_text p{
+    font-size: 13px;
+}
+@media screen and (max-width: 600px) {
+    .videoCard {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+    .VideoCard_image{
+        height: 130px;
+        width: 245px;
+    }
+}

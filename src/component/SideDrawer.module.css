@@ -1,0 +1,46 @@
+.sideOpen{
+    animation:openModel 1s ease-out forwards;
+
+}
+
+.sideClose{
+    animation: CloseModel 1s ease-out forwards;
+
+}
+
+@keyframes openModel {
+    0%{
+        opacity: 0;
+        transform: translateX(-100);
+
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(0%);
+
+    }
+    100%{
+        opacity:1 ;
+        transform: translateX(0);
+    }
+
+    
+}
+@keyframes CloseModel {
+    0%{
+        opacity: 0;
+        transform: translateX(0);
+
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(0%);
+
+    }
+    100%{
+        opacity:1 ;
+        transform: translateX(-100%);
+    }
+
+    
+}

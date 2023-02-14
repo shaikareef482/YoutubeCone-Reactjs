@@ -17,12 +17,21 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import FlagIcon from '@mui/icons-material/Flag';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import FeedbackIcon from '@mui/icons-material/Feedback';
+import SideDrawer from './SideDrawer';
+import { useContext } from 'react';
+import SidebarContext from '../store/sidebar-context';
 
 
 
-function SideBar()
+function SideBar(props)
 {
+
+const {value}= useContext(SidebarContext);
+
+console.log(value)
    return(
+    <React.Fragment>
+    <SideDrawer show={value}>  
     <div className={classes.sidebar}>
         <SideBarRow selected Icon={HomeIcon} title={"Home"}></SideBarRow>
         <SideBarRow Icon={WhatshotIcon} title={"Trending"}></SideBarRow>
@@ -45,6 +54,8 @@ function SideBar()
         
 
     </div>
+    </SideDrawer>  
+    </React.Fragment>
    )
 }
 export default SideBar;

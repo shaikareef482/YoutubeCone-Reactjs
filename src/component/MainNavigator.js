@@ -6,15 +6,32 @@ import SearchIcon from '@mui/icons-material/Search';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar } from "@mui/material";
+import SidebarContext from "../store/sidebar-context";
+import { useContext } from "react";
 
-function MainNavigator()
+
+function MainNavigator(props)
 {
-    return(<header className={classes.header}>
+
+    const {value,setValue}= useContext(SidebarContext);
+
+    const openDrawerHandler=()=>{
+        setValue(!value);
+    }
+    
+    return(
+       
+    <header className={classes.header}>
         
             <div  className={classes.header_right}>
-                <FormatAlignJustifyIcon style={{fontSize:28}}></FormatAlignJustifyIcon>
+                
+                <FormatAlignJustifyIcon onClick={openDrawerHandler} className={classes.header_burger} style={{fontSize:28}}></FormatAlignJustifyIcon>
+                
+            
                     <Link to={'/'}>
-                        <img src="./logo.jpg" alt="it is logo" className={classes.logo}></img>
+    
+                        <img src='./logo1.jpg' alt="youtubelogo" className={classes.header_logo} ></img>
+                    
                     </Link>
             </div>
 
@@ -30,7 +47,10 @@ function MainNavigator()
 
             </div>
         
-    </header>)
+    </header>
+   
+    )
+    
 }
 
 export default MainNavigator;
